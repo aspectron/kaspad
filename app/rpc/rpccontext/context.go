@@ -55,5 +55,6 @@ func NewContext(cfg *config.Config,
 		ShutDownChan:           shutDownChan,
 	}
 	context.BlockTemplateState = NewBlockTemplateState(context)
+	context.NotificationManager = walletnotification.NewNotificationManager()
 	return context
 }

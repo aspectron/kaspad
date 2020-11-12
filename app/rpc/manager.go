@@ -61,6 +61,7 @@ func NewManager(
 			acceptanceIndex,
 			shutDownChan,
 		),
+		handlers: make(map[appmessage.MessageCommand]Handler),
 	}
 
 	for command, handler := range rpcHandlers {
